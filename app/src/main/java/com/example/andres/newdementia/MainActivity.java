@@ -18,5 +18,9 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(MainActivity.this, PatientMain.class); // CaregiverMain
             startActivity(i);
         }
+        else if(view.getId() == R.id.CareLogin){
+            Intent i = new Intent(MainActivity.this, CaregiverMain.class);
+            startActivity(i);
+        }
     }
 }
