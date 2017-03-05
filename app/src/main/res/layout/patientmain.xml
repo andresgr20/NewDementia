@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.andres.newdementia.PatientMain">
+    tools:context="com.example.andres.newdementia.PatientMain"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <EditText
         android:id="@+id/editText"
@@ -14,54 +16,53 @@
         android:inputType="textPersonName"
         android:text="What would you like to do?"
         android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
-        app:layout_constraintBottom_toTopOf="@+id/Bathe"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.659" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Cook"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/Cook"
-        android:layout_width="167dp"
-        android:layout_height="108dp"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="@drawable/cook"
         android:onClick="onButtonClick"
-        app:layout_constraintBottom_toTopOf="@+id/Dog"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/Bathe"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:srcCompat="@drawable/cook" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Dog"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <ImageButton
         android:id="@+id/Bathe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="@drawable/bathe"
         android:onClick="onButtonClick"
-        app:layout_constraintBottom_toTopOf="@+id/Walk"
-        app:layout_constraintLeft_toRightOf="@+id/Cook"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:srcCompat="@drawable/bathe" />
+        app:layout_constraintLeft_toRightOf="@+id/Cook"
+        app:layout_constraintBottom_toTopOf="@+id/Walk"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <ImageButton
         android:id="@+id/Dog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="165dp"
+        android:layout_height="90dp"
+        android:background="@drawable/dog"
         android:onClick="onButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/Walk"
-        app:layout_constraintTop_toBottomOf="@+id/Cook"
-        app:srcCompat="@drawable/dog" />
+        app:layout_constraintTop_toBottomOf="@+id/Cook" />
 
     <ImageButton
         android:id="@+id/Walk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="@drawable/walk"
         android:onClick="onButtonClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/Dog"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bathe"
-        app:srcCompat="@drawable/walk" />
+        app:layout_constraintLeft_toRightOf="@+id/Dog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bathe" />
 
 </android.support.constraint.ConstraintLayout>
