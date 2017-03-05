@@ -14,50 +14,54 @@
         android:inputType="textPersonName"
         android:text="What would you like to do?"
         android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/Bathe"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0.659" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/Cook"
         android:layout_width="167dp"
         android:layout_height="108dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        android:onClick="onButtonClick"
+        app:layout_constraintBottom_toTopOf="@+id/Dog"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/imageButton"
+        app:layout_constraintRight_toLeftOf="@+id/Bathe"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:srcCompat="@drawable/cook" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/Bathe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bathe"
+        android:onClick="onButtonClick"
+        app:layout_constraintBottom_toTopOf="@+id/Walk"
+        app:layout_constraintLeft_toRightOf="@+id/Cook"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/imageButton8"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:srcCompat="@drawable/bathe" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/Dog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton8"
+        app:layout_constraintRight_toLeftOf="@+id/Walk"
+        app:layout_constraintTop_toBottomOf="@+id/Cook"
         app:srcCompat="@drawable/dog" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/Walk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/walk"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/imageButton2"
+        android:onClick="onButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintLeft_toRightOf="@+id/Dog"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bathe"
+        app:srcCompat="@drawable/walk" />
 
 </android.support.constraint.ConstraintLayout>

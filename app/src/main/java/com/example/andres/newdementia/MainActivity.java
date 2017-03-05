@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onButtonClick(View view){
         if(view.getId() == R.id.Blogin){ // need to add the user name
-            Intent i = new Intent(MainActivity.this, CaregiverMain.class);
+            Intent i = new Intent(MainActivity.this, PatientMain.class); // CaregiverMain
             startActivity(i);
         }
     }

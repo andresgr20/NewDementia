@@ -19,6 +19,7 @@ Ca
 
         <activity android:name=".CaregiverMain"></activity>
         <activity android:name=".ContactEmergency"></activity>
+        <activity android:name=".PatientMain"></activity>
     </application>
 
 </manifest>
