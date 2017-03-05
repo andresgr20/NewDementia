@@ -16,10 +16,16 @@ import java.util.TimerTask;
 public class PatientMain extends Activity {
 
     private class PatientTimerTask extends TimerTask {
+        private String taskName = "";
         @Override
         public void run() {
             Intent i = new Intent(PatientMain.this, PatientAct.class);
+            i.putExtra("task", taskName);
             startActivity(i);
+        }
+
+        public void setTaskName(String task) {
+            taskName = task;
         }
     }
 
@@ -32,21 +38,17 @@ public class PatientMain extends Activity {
         Timer timer = new Timer();
         PatientTimerTask ptt = new PatientTimerTask();
         if(view.getId() == R.id.Bathe){ // need to add the user name
-            Intent i = new Intent(PatientMain.this, PatientAct.class);
-            startActivity(i);
-            timer.schedule(ptt, 5000);
-        }
-        else if(view.getId() == R.id.Cook){
-            timer.schedule(ptt, 5000);
-        }
-        else if(view.getId() == R.id.Walk){
-            Intent i = new Intent(PatientMain.this, PatientAct.class);
-            startActivity(i);
-            timer.schedule(ptt, 5000);
-        }else if(view.getId() == R.id.Dog){
-            Intent i = new Intent(PatientMain.this, PatientAct.class);
-            startActivity(i);
-            timer.schedule(ptt, 5000);
+            ptt.setTaskName("bathing");
+            timer.schedule(ptt, 2500);
+        } else if(view.getId() == R.id.Cook){
+            ptt.setTaskName("cooking");
+            timer.schedule(ptt, 2500);
+        } else if(view.getId() == R.id.Walk){
+            ptt.setTaskName("walking");
+            timer.schedule(ptt, 2500);
+        } else if(view.getId() == R.id.Dog){
+            ptt.setTaskName("petting a dog");
+            timer.schedule(ptt, 2500);
         }
     }
 }

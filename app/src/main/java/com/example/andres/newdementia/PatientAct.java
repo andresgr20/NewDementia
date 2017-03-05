@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.view.Menu;
 import android.media.AudioManager;
+import android.widget.TextView;
 import android.widget.Toast;
 /**
  * Created by Andres on 2017-03-05.
@@ -18,8 +19,8 @@ public class PatientAct extends Activity{
         protected void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
             setContentView(R.layout.patientact);
-            audioPlayer("/Users/Andres/Music/iTunes/iTunes Media/Music/Zedd & Alessia Cara/Stay - Single","01 Stay.m4a");
-            play();
+            TextView myAwesomeTextView = (TextView)findViewById(R.id.stillcooking);
+            myAwesomeTextView.setText("Are you still "+getIntent().getStringExtra("task")+"?");
         }
    /* public class Main extends Activity {
         public String url = "http://69.64.48.96:9880";
