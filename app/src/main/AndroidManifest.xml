@@ -20,6 +20,13 @@ Ca
         <activity android:name=".CaregiverMain"></activity>
         <activity android:name=".ContactEmergency"></activity>
         <activity android:name=".PatientMain"></activity>
+        <activity android:name=".PatientAct"></activity>
+        <activity android:name=".CheckPatient"></activity>
+        <activity android:name=".checkMap"></activity>
+        <activity android:name=".AddPatient"></activity>
+        <activity android:name=".AddGreetings"></activity>
+        <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     </application>
 
 </manifest>
