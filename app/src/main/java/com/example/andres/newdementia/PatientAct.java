@@ -19,8 +19,8 @@ public class PatientAct extends Activity{
         protected void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
             setContentView(R.layout.patientact);
-            TextView myAwesomeTextView = (TextView)findViewById(R.id.stillcooking);
-            myAwesomeTextView.setText("Are you still "+getIntent().getStringExtra("task")+"?");
+            TextView taskText = (TextView)findViewById(R.id.stillcooking);
+            taskText.setText("Are you still "+getIntent().getStringExtra("task")+"?");
         }
    /* public class Main extends Activity {
         public String url = "http://69.64.48.96:9880";
